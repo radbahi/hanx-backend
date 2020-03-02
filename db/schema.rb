@@ -16,12 +16,10 @@ ActiveRecord::Schema.define(version: 4) do
   enable_extension "plpgsql"
 
   create_table "carts", force: :cascade do |t|
-    t.bigint "items_id"
-    t.bigint "users_id"
+    t.integer "item_id"
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["items_id"], name: "index_carts_on_items_id"
-    t.index ["users_id"], name: "index_carts_on_users_id"
   end
 
   create_table "items", force: :cascade do |t|
@@ -40,6 +38,7 @@ ActiveRecord::Schema.define(version: 4) do
     t.string "image"
     t.string "trailer"
     t.integer "release_year"
+    t.text "storyline"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -50,6 +49,4 @@ ActiveRecord::Schema.define(version: 4) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "carts", "items", column: "items_id"
-  add_foreign_key "carts", "users", column: "users_id"
 end
