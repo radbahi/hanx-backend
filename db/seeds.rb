@@ -8,6 +8,7 @@
 
 Item.destroy_all
 Movie.destroy_all
+User.destroy_all 
 
 Item.create( name: "'Let Them Eat Chocolate' by Hanksy", description: "Original artwork by Hanksy", price: 700.00, image: "http://i.huffpost.com/gadgets/slideshows/204269/slide_204269_604845_large.jpg?1326291519")
 Item.create( name: "'Houston We Have a Problem' by Hanksy", description: "Original artwork by Hanksy", price: 1500.00, image: "http://i.huffpost.com/gadgets/slideshows/204269/slide_204269_604847_large.jpg?1326291519")
@@ -36,11 +37,7 @@ Item.create( name: "Tom Hanks iPhone Case/Cover", description: "This iPhone is H
 Item.create( name: "Tom Hanks Shower Curtain", description: "Give your bathroom a 'Splash' of pizazz. This shower is HANX approved.", price: 59.53, image: "https://ih1.redbubble.net/image.1062028656.1593/ur,shower_curtain_closed_context,square,1000x1000.1.jpg")
 Item.create( name: "Tom Hanks Socks", description: "For when you just feel like running...these socks are HANX approved.", price: 16.83, image: "https://ih1.redbubble.net/image.1062028646.1593/ur,socks_size_comparison_medium,tall_portrait,750x1000-bg,f8f8f8.1.jpg")
 Item.create( name: "Tom Hanks Throw Blanket", description: "'Cast away' your day and snuggle up in this coziness. This blanket is HANX approved.", price: 53.21, image: "https://ih0.redbubble.net/image.462734363.4934/ur,blanket_large_bed,square,x1000.1.jpg")# t.string :title
-# t.string :director
-# t.string :description
-# t.string :image
-# t.trailer
-# t.integer :release_year
+
 
 Movie.create(title: "Cast Away", storyline: "A man is marooned on an island after his plane crashes into the ocean. Far away from home, his girlfriend, and any human contact, he engages in a battle of wits with himself as he is tested mentally, physically, and emotionally in order to survive.", trailer: "https://www.youtube.com/embed/qGuOZPwLayY", director: "Robert Zemeckis", description: "A FedEx executive undergoes a physical and emotional transformation after crash landing on a deserted island.", image: "https://m.media-amazon.com/images/M/MV5BN2Y5ZTU4YjctMDRmMC00MTg4LWE1M2MtMjk4MzVmOTE4YjkzXkEyXkFqcGdeQXVyNTc1NTQxODI@._V1_UX182_CR0,0,182,268_AL_.jpg", release_year: 2000)
 Movie.create(title: "Forrest Gump", storyline: "Forrest Gump is a simple man with a low I.Q. but good intentions. He is running through childhood with his best and only friend Jenny. His 'mama' teaches him the ways of life and leaves him to choose his destiny. Forrest joins the army for service in Vietnam, finding new friends called Dan and Bubba, he wins medals, creates a famous shrimp fishing fleet, inspires people to jog, starts a ping-pong craze, creates the smiley, writes bumper stickers and songs, donates to people and meets the president several times. However, this is all irrelevant to Forrest who can only think of his childhood sweetheart Jenny Curran, who has messed up her life. Although in the end all he wants to prove is that anyone can love anyone.", trailer: "https://www.youtube.com/embed/bLvqoHBptjg", director: "Robert Zemeckis", description: "The presidencies of Kennedy and Johnson, the events of Vietnam, Watergate, and other historical events unfold through the perspective of an Alabama man with an IQ of 75, whose only desire is to be reunited with his childhood sweetheart.", image: "https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UY268_CR1,0,182,268_AL_.jpg", release_year: 1994)
@@ -73,4 +70,6 @@ Movie.create(title: "The Ladykillers", storyline: "A remake of the 1955 comedy, 
 Movie.create(title: "A Beautiful Day in the Neighborhood", storyline: "Two-time Oscar®-winner Tom Hanks portrays Mister Rogers in A Beautiful Day in the Neighborhood, a timely story of kindness triumphing over cynicism, based on the true story of a real-life friendship between Fred Rogers and journalist Tom Junod. After a jaded magazine writer (Emmy winner Matthew Rhys) is assigned a profile of Fred Rogers, he overcomes his skepticism, learning about empathy, kindness, and decency from America's most beloved neighbor.", trailer: "https://www.youtube.com/embed/-VLEPhfEN2M", director: "Marielle Helle", description: "Based on the true story of a real-life friendship between Fred Rogers and journalist Lloyd Vogel.", image: "https://m.media-amazon.com/images/M/MV5BZWE3ZDYwNmItOWM5ZS00Y2Q4LTlhNmYtODlhY2QxYzA1MDlhXkEyXkFqcGdeQXVyNjA5MDIyMzU@._V1_UX182_CR0,0,182,268_AL_.jpg", release_year: 2019)
 Movie.create(title: "Cloud Atlas", storyline: "Everything is connected: an 1849 diary of an ocean voyage across the Pacific, letters from a composer to his lover, a thriller about a conspiracy at a nuclear power plant, a farce about a publisher in a nursing home;, a rebellious clone in futuristic Korea, and the tale of a tribe living on post-apocalyptic Hawaii far in the future.", trailer: "https://www.youtube.com/embed/hWnAqFyaQ5s", director: "Tom Tykwer, Lana Wachowski, Lilly Wachowski", description: "An exploration of how the actions of individual lives impact one another in the past, present and future, as one soul is shaped from a killer into a hero, and an act of kindness ripples across centuries to inspire a revolution.", image: "https://m.media-amazon.com/images/M/MV5BMTczMTgxMjc4NF5BMl5BanBnXkFtZTcwNjM5MTA2OA@@._V1_UX182_CR0,0,182,268_AL_.jpg", release_year: 2012)
  
-# REMEMBER TO GET LINKS TO TRAILERS
+User.create(name: "Tom Hanks")
+
+Cart.create(user_id: User.all.sample.id)
