@@ -9,6 +9,8 @@
 Item.destroy_all
 Movie.destroy_all
 User.destroy_all 
+Cart.destroy_all
+CartsItem.destroy_all
 
 Item.create( name: "'Let Them Eat Chocolate' by Hanksy", description: "Original artwork by Hanksy", price: 700.00, image: "http://i.huffpost.com/gadgets/slideshows/204269/slide_204269_604845_large.jpg?1326291519")
 Item.create( name: "'Houston We Have a Problem' by Hanksy", description: "Original artwork by Hanksy", price: 1500.00, image: "http://i.huffpost.com/gadgets/slideshows/204269/slide_204269_604847_large.jpg?1326291519")
@@ -73,3 +75,7 @@ Movie.create(title: "Cloud Atlas", storyline: "Everything is connected: an 1849 
 User.create(name: "Tom Hanks")
 
 Cart.create(user_id: User.all.sample.id)
+
+CartsItem.create(item_id: Item.all.sample.id, cart_id: Cart.all.sample.id)
+CartsItem.create(item_id: Item.all.sample.id, cart_id: Cart.all.sample.id)
+CartsItem.create(item_id: Item.all.sample.id, cart_id: Cart.all.sample.id)

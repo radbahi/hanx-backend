@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  post "/login", to: "users#show"
   resources :carts_items
   resources :movies
   resources :items
