@@ -13,5 +13,12 @@ class UsersController < ApplicationController
             render json: {message: "User not found"}
         end
     end
+
+    def create
+        newUser = User.create(name: params[:name])
+        newCart = Cart.create(user_id: newUser.id)
+        newUser.cart = newCart
+        render json: newUser
+    end
     
 end
