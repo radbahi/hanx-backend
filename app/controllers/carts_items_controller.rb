@@ -17,4 +17,12 @@ class CartsItemsController < ApplicationController
         render json: cartItem
     end
 
+    def destroy
+        cartItem = CartsItem.find_by(id: params[:id])
+        cartItem.destroy
+        cart = Cart.find_by(id: cartItem.cart_id)
+        user = User.find_by(id: cart.user_id)
+        render json: user
+    end
+
 end
