@@ -25,10 +25,18 @@ A user can
 * "purchase" the items in their cart
 
 
-## Screenshot
+## Screenshots
+
+Bio/Home Page
 ![Screenshot](public/bio.png)
+
+Merch Page
 ![Screenshot](public/merch.png)
+
+Movies Page
 ![Screenshot](public/movies.png)
+
+Movie Show Page
 ![Screenshot](public/movie-show.png)
 
 
